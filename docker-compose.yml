@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+
+  case_paggo_db:
+    image: bitnami/postgresql
+    ports:
+      - '5432:5432'
+    environment:
+      - POSTGRES_USERNAME=${POSTGRES_USERNAME}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DATABASE=${POSTGRES_DATABASE}
